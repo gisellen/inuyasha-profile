@@ -4,10 +4,23 @@ $title: white
 .background-img 
     background-color: black
     background-image: url('../assets/background.jpg')
+    background-repeat: no-repeat
     background-position: center
+    background-size: 105%
     height: 100vh
-    z-index: -99
-    
+
+.small-title
+    font-size: 48px
+    align-self: center
+
+.title
+    display: flex
+    flex-direction: column
+    position: absolute
+    color: $title
+    font-size: 128px
+    font-variant: small-caps
+    font-weight: 200
 .blur
     position: relative
     background: rgba(0, 0, 0, 0.5)
@@ -26,7 +39,3 @@ $title: white
     font-size: 287px
     filter: blur(3px)
 
-.title
-    position: absolute
-    color: $title
-    font-size: 128px

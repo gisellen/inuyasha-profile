@@ -4,20 +4,25 @@ import "./home.sass";
 export default function Home() {
   const [offsetX, setOffsetX] = useState(0)
   const [offsetY, setOffsetY] = useState(0)
-  const [speed, setSpeed] = useState(1/32)
+  const [speed, setSpeed] = useState(100)
 function handleMouseMove(e) {
-  console.log(e.pageX, e.pageY)
-  setOffsetX(e.pageX)
+  let _w = e.clientX - window.innerWidth/2
+  let _h = e.clientY - window.innerHeight/2
+  let depthX = `${50 + _w/speed}`
+  let depthY = `${50 + _h/speed}`
+  console.log(depthX, depthY)
+  setOffsetX(depthX)
+  setOffsetY(depthY)
 }
 
 let offset = {
-  // backgroundPositionX: `${offsetX}`
+  backgroundPosition: `${offsetX}% ${offsetY}%`
              }
   return (
     <div style={offset} onMouseMove={e => handleMouseMove(e)} className="background-img">
       <div className="blur">
       <div className="text highlightDisable">犬夜叉</div>
-      <div className="title">The Characters of Inuyasha</div>
+      <div className="title"><span className="small-title">The Characters of</span> Inuyasha</div>
       </div>
 
     </div>
