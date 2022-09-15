@@ -1,14 +1,37 @@
+@use "sass:meta"
+@import url('https://fonts.googleapis.com/css2?family=Ruluko&display=swap')
+
+// color vars
+$title: white
+$title-font: 'Ruluko', sans-serif
+
 .background-img 
     background-color: black
     background-image: url('../assets/background.jpg')
-    background-position: center
     background-repeat: no-repeat
+    background-position: center
     background-size: cover
-    
     height: 100vh
-    z-index: -99
-    
+
+.small-title
+    font-size: 48px
+    align-self: center
+    font-family: #{meta.inspect($title-font)}
+    margin-bottom: -70px
+
+.title
+    display: flex
+    flex-direction: column
+    position: absolute
+    color: $title
+    font-family: #{meta.inspect($title-font)}
+    font-size: 287px
+    font-variant: small-caps
+    font-weight: bolder
+    letter-spacing: .8rem
+    text-align: center
 .blur
+    position: relative
     background: rgba(0, 0, 0, 0.5)
     backdrop-filter: blur(5px)
     height: 100%
@@ -18,9 +41,10 @@
 
 .highlightDisable
     user-select: none
+
 .text
-    // blurs
     opacity: 25%
     color: white
     font-size: 287px
-    
+    filter: blur(3px)
+
