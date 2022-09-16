@@ -10,14 +10,15 @@ $title-font: 'Ruluko', sans-serif
     background-image: url('../assets/background.jpg')
     background-repeat: no-repeat
     background-position: center
-    background-size: cover
+    background-size: auto 110%
     height: 100vh
+    width: 100%
 
 .small-title
-    font-size: 48px
+    font-size: 36px
     align-self: center
     font-family: #{meta.inspect($title-font)}
-    margin-bottom: -70px
+    margin-bottom: 0px
 
 .title
     display: flex
@@ -25,11 +26,12 @@ $title-font: 'Ruluko', sans-serif
     position: absolute
     color: $title
     font-family: #{meta.inspect($title-font)}
-    font-size: 287px
-    font-variant: small-caps
+    font-size: 128px
     font-weight: bolder
-    letter-spacing: .8rem
+    letter-spacing: .3rem
     text-align: center
+    margin-top: 60px
+    
 .blur
     position: relative
     background: rgba(0, 0, 0, 0.5)
@@ -43,8 +45,10 @@ $title-font: 'Ruluko', sans-serif
     user-select: none
 
 .text
-    opacity: 25%
+    opacity: 12%
     color: white
-    font-size: 287px
-    filter: blur(3px)
+    font-size: 149px
+    filter: blur(1px)
+    writing-mode: vertical-rl
+    text-orientation: upright
 
