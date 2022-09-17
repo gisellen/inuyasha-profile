@@ -35,7 +35,7 @@ export default function Home() {
         <div className="text highlightDisable">犬夜叉</div>
         <AnimatePresence exitBeforeEnter>
           <Routes location={location} key={location.pathname}>
-            <Route path="/home" element={<Title />} />
+            <Route path="/" element={<Title />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </AnimatePresence>
