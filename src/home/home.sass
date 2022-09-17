@@ -19,6 +19,14 @@ $title-font: 'Ruluko', sans-serif
     align-self: center
     font-family: #{meta.inspect($title-font)}
     margin-bottom: 0px
+    letter-spacing: .3rem
+
+.big-title
+    font-size: 128px
+    align-self: center
+    margin-bottom: 0px
+    font-weight: bolder
+    letter-spacing: .3rem
 
 .title
     display: flex
@@ -26,12 +34,22 @@ $title-font: 'Ruluko', sans-serif
     position: absolute
     color: $title
     font-family: #{meta.inspect($title-font)}
-    font-size: 128px
-    font-weight: bolder
-    letter-spacing: .3rem
     text-align: center
     margin-top: 60px
-    
+
+.nav
+    margin-top: 40px
+
+.link
+    text-decoration: none
+    color: $title
+    padding: 10px
+    font-size: 20px
+    transition: .2s
+
+.link:hover
+    font-size: 22px
+
 .blur
     position: relative
     background: rgba(0, 0, 0, 0.5)
