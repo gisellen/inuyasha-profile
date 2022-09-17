@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "./home.sass";
-import { motion } from "framer-motion";
+
+import { Routes, Route, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+
+import Title from "./Title";
+import About from "./About";
 
 export default function Home() {
   const [offsetX, setOffsetX] = useState(0);
@@ -19,6 +24,7 @@ export default function Home() {
     backgroundPosition: `${offsetX}% ${offsetY}%`,
   };
 
+  const location = useLocation();
   return (
     <div
       style={offset}
@@ -27,21 +33,12 @@ export default function Home() {
     >
       <div className="blur">
         <div className="text highlightDisable">犬夜叉</div>
-        <div className="title highlightDisable">
-          <motion.span
-            animate={{ y: [-100, 0], opacity: [0, 1] }}
-            transition={{ ease: "easeOut", duration: 1 }}
-            className="small-title"
-          >
-            THE CHARACTERS OF
-          </motion.span>
-          <motion.span
-            animate={{ y: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.9, ease: "easeOut", duration: 1 }}
-          >
-            INUYASHA
-          </motion.span>
-        </div>
+        <AnimatePresence exitBeforeEnter>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/home" element={<Title />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </AnimatePresence>
       </div>
     </div>
   );
