@@ -36,6 +36,7 @@ $title-font: 'Ruluko', sans-serif
     font-family: #{meta.inspect($title-font)}
     text-align: center
     margin-top: 60px
+    
 
 .nav
     margin-top: 40px
@@ -70,3 +71,10 @@ $title-font: 'Ruluko', sans-serif
     writing-mode: vertical-rl
     text-orientation: upright
 
+@media (max-width: 769px)
+    .big-title
+        font-size: 12.5vw
+    .small-title
+        font-size: 5vw
+    .text
+        font-size: 20vw
