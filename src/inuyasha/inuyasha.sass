@@ -1,0 +1,45 @@
+.inuyasha
+    height: 100vh
+    background: #fcfaf8fd
+    display: flex
+    align-items: center
+    overflow: hidden //prevents childs go out of the parent
+
+.inuyasha-description
+    width: 40vw
+    font-size: 24px
+    color: #737373
+    margin-left: 12%
+    .inuyasha-header
+        color: #D01C43
+        font-size: 50px
+    
+.inu-image-group
+    height: 100vh
+    margin: auto
+    position: relative
+    padding-top: 40px
+    margin-left: 3vw
+
+    .circle
+        height: 500px
+        width: 500px
+        background-color: rgb(241, 239, 239)
+        border-radius: 50%
+        top: 100px
+        position: absolute
+
+    .inu-pic
+        height: 90vh
+        position: absolute
+
+@media (max-width: 1240px)
+    .inu-image-group
+        margin-left: 0
+
+@media (max-width: 769px)
+    .inuyasha
+        flex-direction: column-reverse
+
+    .inuyasha-description
+        width: 80vw

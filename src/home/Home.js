@@ -24,9 +24,15 @@ export default function Home() {
     backgroundPosition: `${offsetX}% ${offsetY}%`,
   };
 
+  const animation = {
+    exit: { opacity: 0, x: 0, transition: { duration: 1 } },
+  };
+
   const location = useLocation();
   return (
-    <div
+    <motion.div
+      variants={animation}
+      exit="exit"
       style={offset}
       onMouseMove={(e) => handleMouseMove(e)}
       className="background-img"
@@ -40,6 +46,6 @@ export default function Home() {
           </Routes>
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 }

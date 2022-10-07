@@ -29,8 +29,11 @@ $title-font: 'Ruluko', sans-serif
     letter-spacing: .3rem
 
 .title
+    height: 90vh
     display: flex
     flex-direction: column
+    align-items: center
+    justify-content: center
     position: absolute
     color: $title
     font-family: #{meta.inspect($title-font)}
@@ -70,6 +73,9 @@ $title-font: 'Ruluko', sans-serif
     filter: blur(1px)
     writing-mode: vertical-rl
     text-orientation: upright
+
+.inuyasha-link
+    margin-top: 20px
 
 @media (max-width: 769px)
     .big-title
