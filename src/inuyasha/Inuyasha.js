@@ -1,6 +1,7 @@
 import React from "react";
 import "./inuyasha.sass";
-import InuyashaImage from "../assets/inuyasha.png";
+import InuyashaImage from "../assets/Inuyasha.png";
+import InuyashaImage2 from "../assets/Inuyasha2.png";
 import { motion } from "framer-motion";
 
 
@@ -14,19 +15,22 @@ export default function Inuyasha() {
     variants={animation}
     animate="animate"
     className="inuyasha">
+      <img className="inu-pic2" src={InuyashaImage2} />
       <section className="inuyasha-description">
         <h2 className="inuyasha-header">INUYASHA</h2>
         <p>
           The son of a demon father and a human mother, was bound to a sacred
           tree from Kikyo, the shrine priestess, while trying to claim the
-          Shikon Jewel. A powerful shard amongst demons. Until Kagome, fdks
-          reincarnation freed him.
+          Shikon Jewel, a powerful shard amongst demons. Until Kagome, who is supposedly Kikyo's
+          reincarnation, freed him.
         </p>
-      </section>
-      <section className="inu-image-group">
-        <div className="circle"></div>
+        <blockquote>"I'm a half-demon, more egotistical and greedy than any other living creature — that's what human beings are, right?"</blockquote >
         <img className="inu-pic" src={InuyashaImage} />
+        
       </section>
+
+
+        
     </motion.div>
   );
 }
