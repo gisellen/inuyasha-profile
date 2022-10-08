@@ -3,43 +3,58 @@
     background: #fcfaf8fd
     display: flex
     align-items: center
+    justify-content: center
     overflow: hidden //prevents childs go out of the parent
 
+.inuyasha-header
+    font-size: 30px
+    letter-spacing: 20px
+
 .inuyasha-description
+    position: relative
     width: 40vw
-    font-size: 24px
+    font-size: 20px
     color: #737373
-    margin-left: 12%
+    margin-left: 5%
+    word-spacing:4px
+    line-height: 179.2%
     .inuyasha-header
         color: #D01C43
         font-size: 50px
+        letter-spacing: 51%
     
-.inu-image-group
-    height: 100vh
-    margin: auto
-    position: relative
-    padding-top: 40px
-    margin-left: 3vw
+.inu-pic
+    top: -200px
+    margin-left: 280px
+    position: absolute
+    user-drag: none
+    -webkit-user-drag: none
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    filter: brightness(20%)
+    opacity: 70%
 
-    .circle
-        height: 500px
-        width: 500px
-        background-color: rgb(241, 239, 239)
-        border-radius: 50%
-        top: 100px
-        position: absolute
-
+@media (max-width: 1280px)
     .inu-pic
-        height: 90vh
-        position: absolute
-
-@media (max-width: 1240px)
-    .inu-image-group
-        margin-left: 0
+        margin-left: 100px
+        top: -100px
 
 @media (max-width: 769px)
     .inuyasha
-        flex-direction: column-reverse
-
+        flex-direction: column
+    .inu-pic2
+        width: 40%
     .inuyasha-description
         width: 80vw
+    
+    .inu-pic
+        top: 0px
+
+@media (max-width: 390px)
+    .inuyasha-description
+        width: 100%
+    .inu-pic
+        top: 0px
+        margin-left: -180px
