@@ -43,7 +43,7 @@ export default function Title() {
         transition={{ delay: 3, ease: "easeOut", duration: 2 }}
         exit="exit"
       >
-        <NavLink className="link" to="/inuyasha">
+        <NavLink className="link" to="/characters">
           ENTER THE REALM
         </NavLink>
       </motion.div>
