@@ -7,7 +7,7 @@ import CharacterNav from "../common/CharacterNav";
 
 export default function Inuyasha() {
   const animation = {
-    animate: { y: [-100, 0], opacity: [0, 1] },
+    animate: { y: [-100, 0], opacity: [0, 1], transition: { duration: 1 } },
     exit: { opacity: 0, x: 0, transition: { duration: 1 } },
   };
   return (
