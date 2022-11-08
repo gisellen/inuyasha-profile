@@ -11,15 +11,38 @@
     justify-content: space-between
 
 .character
+    display: flex
+    align-items: center
+    justify-content: center
     position: relative
     transition: transform 0.3s
+    
 
 .character-title
+    display: none
+    color: white
     position: absolute
+    font-weight: bold
+    font-size: 20px
+    transition: transform 0.3s
+    z-index: 100
+    letter-spacing: 1px
+    pointer-events: none
 
 .character-image
     height: 359px
     width: 254px
+    transition: filter 0.2s
+    border-radius: 2px
+    transition: opacity 0.3s
 
 .character:hover
-    transform: scale(1.06)
+    transform: scale(1.05)
+    cursor: pointer
+
+.character:hover .character-title
+    display: block
+
+.character-image:hover
+    filter: blur(2px)
+    opacity: 40%
