@@ -23,6 +23,7 @@ export default function CharacterPage() {
       exit={{opacity: [1,0], transition: {duration: 1}}}
       className="center character-page"
     >
+      <div className="blur" style={{width: '100%'}}>
       <motion.div
         variants={animation}
         animate="animate"
@@ -84,6 +85,7 @@ export default function CharacterPage() {
           <img className="character-image" src={kilalaImg} />
         </div>
       </motion.div>
+      </div>
     </motion.div>
   );
 }

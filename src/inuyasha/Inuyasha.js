@@ -11,7 +11,7 @@ export default function Inuyasha() {
     exit: { opacity: 0, x: 0, transition: { duration: 1 } },
   };
   return (
-    <motion.div variants={animation} animate="animate">
+    <motion.div variants={animation} animate="animate" exit="exit">
       <div className="inuyasha">
         <div className="inuyasha-card">
           <img className="inu-pic2" src={InuyashaImage2} />
