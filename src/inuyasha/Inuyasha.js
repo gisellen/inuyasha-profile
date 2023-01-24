@@ -1,6 +1,6 @@
 import React from "react";
 import "./inuyasha.sass";
-import InuyashaImage from "../assets/Inuyasha.png";
+import InuyashaImage from "../assets/inuyasha.png";
 import InuyashaImage2 from "../assets/Inuyasha2.png";
 import { motion } from "framer-motion";
 import CharacterNav from "../common/CharacterNav";
