@@ -1,0 +1,28 @@
+@use "sass:meta"
+@import '../../common/utilities/_variables'
+
+.small-title
+    font-size: 36px
+    align-self: center
+    font-family: #{meta.inspect($title-font)}
+    margin-bottom: 0px
+    letter-spacing: .3rem
+
+.big-title
+    font-size: 128px
+    align-self: center
+    margin-bottom: 0px
+    font-weight: bolder
+    letter-spacing: .3rem
+
+.title
+    height: 90vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: absolute
+    color: $title
+    font-family: #{meta.inspect($title-font)}
+    text-align: center
+    margin-top: 60px

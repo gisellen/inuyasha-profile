@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import "./home.sass";
+import "./Main.sass";
 
-import { Routes, Route, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
-import Title from "./Title";
-import About from "./About";
+import Home from "./home/Home";
+import About from "./home/About";
+import CharacterPage from "./character-page/CharacterPage";
 
-export default function Home() {
+export default function Main() {
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
   const [speed, setSpeed] = useState(60);
+
   function handleMouseMove(e) {
     let _w = e.clientX - window.innerWidth / 2;
     let _h = e.clientY - window.innerHeight / 2;
@@ -24,11 +25,7 @@ export default function Home() {
     backgroundPosition: `${offsetX}% ${offsetY}%`,
   };
 
-  const animation = {
-    exit: { opacity: 0, x: 0, transition: { duration: 1 } },
-  };
 
-  const location = useLocation();
   return (
     <div
       style={offset}
@@ -37,13 +34,18 @@ export default function Home() {
     >
       <div className="blur">
         <div className="text highlightDisable">犬夜叉</div>
-        <AnimatePresence exitBeforeEnter>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Title />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </AnimatePresence>
+        <Home />
       </div>
+      <CharacterPage />
     </div>
   );
 }
+
+// changing routes if needed again
+// const location = useLocation();
+// <AnimatePresence exitBeforeEnter>
+// <Routes location={location} key={location.pathname}>
+//   <Route path="/" element={<Title />} />
+//   <Route path="/about" element={<About />} />
+// </Routes>
+// </AnimatePresence>

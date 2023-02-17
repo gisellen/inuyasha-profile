@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Nav from "../common/Nav";
 import { NavLink } from "react-router-dom";
+import './Home.sass'
 
-export default function Title() {
+export default function Home() {
+  const [isAbout, setIsAbout ] = useState(false);
+
   const animation = {
     animate: { y: [-100, 0], opacity: [0, 1] },
     exit: { opacity: 0, x: 0, transition: { duration: 1 } },
@@ -34,7 +36,10 @@ export default function Title() {
         transition={{ delay: 3, ease: "easeOut", duration: 2 }}
         exit="exit"
       >
-        <Nav />
+        <>
+          <NavLink className="link" >HOME</NavLink>
+          <NavLink className="link" onClick={() => setIsAbout(true)}>ABOUT</NavLink>
+        </>
       </motion.div>
       <motion.div
         className="inuyasha-link"
@@ -43,9 +48,6 @@ export default function Title() {
         transition={{ delay: 3, ease: "easeOut", duration: 2 }}
         exit="exit"
       >
-        <NavLink className="link" to="/characters">
-          ENTER THE REALM
-        </NavLink>
       </motion.div>
     </div>
   );

@@ -1,6 +1,5 @@
 .character-page
     background-color: black
-    background-image: url('../assets/background.jpg')
     background-repeat: no-repeat
     background-position: center
     background-size: auto 110%
@@ -11,7 +10,6 @@
     width: 802px
     height: 739px
     display: flex
-    flex-wrap: wrap
     align-content: space-between
     justify-content: space-between
 
@@ -35,14 +33,15 @@
     pointer-events: none
 
 .character-image
-    height: 359px
-    width: 254px
+    height: 100%
+    width: 100%
+    object-fit: cover
     transition: filter 0.2s
     border-radius: 2px
     transition: opacity 0.3s
 
 .character:hover
-    transform: scale(1.05)
+    transform: scale(1.02)
     cursor: pointer
 
 .character:hover .character-title

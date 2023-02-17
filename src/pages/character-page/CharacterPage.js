@@ -1,10 +1,10 @@
 import React from "react";
-import inuyashaImg from "../assets/Inuyasha2.png";
-import kagomeImg from "../assets/kagome.png";
-import sangoImg from "../assets/sango.png";
-import mirokuImg from "../assets/miroku.png";
-import shippoImg from "../assets/shippo.png";
-import kilalaImg from "../assets/kilala.png";
+import inuyashaImg from "../../assets/Inuyasha2.png";
+import kagomeImg from "../../assets/kagome.png";
+import sangoImg from "../../assets/sango.png";
+import mirokuImg from "../../assets/miroku.png";
+import shippoImg from "../../assets/shippo.png";
+import kilalaImg from "../../assets/kilala.png";
 
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 export default function CharacterPage() {
   const animation = {
-    animate: { opacity: [0, 1], transition: { duration: 2 } },
+    animate: { opacity: [0, 1], transition: { duration: 1.5 } },
     exit: { opacity: 0, x: 0, transition: { duration: 1 } },
   };
 
@@ -82,7 +82,7 @@ export default function CharacterPage() {
             <div>雲母</div>
             </div>
           </div>
-          <img className="character-image" src={kilalaImg} />
+          <img className="character-image" style={{objectPosition: "17% 25%"}} src={kilalaImg} />
         </div>
       </motion.div>
       </div>

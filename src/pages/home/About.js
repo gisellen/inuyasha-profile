@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from '../common/Nav'
 import { motion } from "framer-motion";
 import './About.sass'
 
@@ -12,6 +11,5 @@ export default function About() {
 THIS WEBSITE IS AN UNOFFICIAL WEBSITE AND IS INTENDED FOR LEARNING USE ONLY.<br />
       THIS SHOWCASES THE MAIN CHARACTERS OF A POPULAR ANIME IN THE LATE 90S, INUYASHA BY RUMIKO TAKAHASHI, ORIGINALLY PUBLISHED BY SHOGAKUKAN.
       </motion.section>
-      <Nav />
   </div>;
 }
